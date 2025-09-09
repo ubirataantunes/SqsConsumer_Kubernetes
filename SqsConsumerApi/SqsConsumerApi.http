@@ -1,0 +1,6 @@
+@SqsConsumerApi_HostAddress = http://localhost:5279
+
+GET {{SqsConsumerApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,34 @@
+# docker-compose.yml
+# version: '3.8'
+
+services:
+  localstack:
+    container_name: localstack
+    image: localstack/localstack:latest
+    ports:
+      - "4566:4566"        # Porta principal para os serviços AWS
+    environment:
+      - SERVICES=sqs
+      - AWS_DEFAULT_REGION=us-east-1
+      - AWS_ACCESS_KEY_ID=test
+      - AWS_SECRET_ACCESS_KEY=test
+    volumes:
+      - "${LOCALSTACK_VOLUME_DIR:-./volume}:/var/lib/localstack"
+      - "/var/run/docker.sock:/var/run/docker.sock"
+
+  aws-cli:
+    image: amazon/aws-cli:latest
+    depends_on:
+      - localstack
+    environment:
+      - AWS_ACCESS_KEY_ID=test
+      - AWS_SECRET_ACCESS_KEY=test
+      - AWS_DEFAULT_REGION=us-east-1
+    entrypoint: >
+      /bin/sh -c "
+        echo 'Aguardando o LocalStack ficar pronto...'
+        sleep 5
+        echo 'Criando a fila SQS...'
+        aws sqs create-queue --queue-name minha-fila-processamento --endpoint-url http://localstack:4566
+        echo 'Fila criada com sucesso!'
+      "

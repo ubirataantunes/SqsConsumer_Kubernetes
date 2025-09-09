@@ -1,0 +1,126 @@
+# Arquivo .gitignore completo para projetos Fullstack (.NET + Angular)
+
+# -------------------------------------------------------------------
+# SEÇÃO GERAL E DE SISTEMAS OPERACIONAIS (OS)
+# -------------------------------------------------------------------
+
+# SEÇÃO DE IDEs E EDITORES (Visual Studio, VS Code, Rider)
+# -------------------------------------------------------------------
+
+# Visual Studio / Rider cache e configurações de usuário
+.vs/
+.idea/
+*.suo
+*.user
+
+# Arquivos gerados pelo Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Arquivos gerados pelo macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+.Spotlight-V100
+.Trashes
+
+# Arquivos gerados pelo Linux e editores de texto
+*~
+*.swp
+*.swo
+
+# -------------------------------------------------------------------
+# SEÇÃO DE IDEs E EDITORES (Visual Studio, VS Code, Rider)
+# -------------------------------------------------------------------
+
+# Visual Studio / Rider cache e configurações de usuário
+.vs/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# -------------------------------------------------------------------
+# SEÇÃO DE BACK-END: .NET / C#
+# -------------------------------------------------------------------
+
+# Pastas de build
+[Bb]in/
+[Oo]bj/
+[Rr]elease/
+[Dd]ebug/
+
+# Arquivos gerados pelo build
+*.pdb
+*.dll
+*.exe
+*.aps
+*.ncb
+*.tlog
+*.log
+
+# Pasta de publicação
+[Pp]ublish/
+[Pp]ublishProfiles/
+*.publish.xml
+
+# Resultados de Testes
+[Tt]est[Rr]esult*/
+[Tt]est[Rr]esults/
+*.trx
+
+# Pacotes NuGet (estilo antigo e cache)
+packages/
+*.nupkg
+~.nuget/
+
+# Arquivos de segredos do usuário e configurações locais
+secrets.json
+appsettings.Development.json
+appsettings.*.json
+!appsettings.Template.json
+
+# Arquivos de backup do Resharper
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+
+# Ferramentas .NET
+.store/
+.tools/
+
+# -------------------------------------------------------------------
+# SEÇÃO DE FRONT-END: ANGULAR / NODE.JS / NPM
+# -------------------------------------------------------------------
+
+# Dependências
+# A pasta node_modules é gigantesca e deve ser sempre reinstalada com 'npm install'
+node_modules/
+
+# Arquivos de log do npm e yarn
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Pasta de build do Angular
+dist/
+.angular/cache
+
+# Arquivos temporários e de cobertura de testes
+tmp/
+coverage/
+*.tgz
+
+# Arquivos de ambiente locais (nunca comitar segredos!)
+src/environments/environment.local.ts
