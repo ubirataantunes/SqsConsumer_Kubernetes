@@ -142,11 +142,3 @@ Este projeto serve como uma base sólida. Para levá-lo ao próximo nível, voc�
 -   Adicionar **Dead Letter Queue** para lidar com mensagens que falham no processamento.
 -   Implementar um sistema de **monitoramento e alertas** (ex: Prometheus e Grafana).
 
-## Autor
-
--   [Seu Nome Completo]
--   [Seu GitHub ou LinkedIn]
-
-## Licença
-
-MIT License
