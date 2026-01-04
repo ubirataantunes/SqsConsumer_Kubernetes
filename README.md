@@ -14,7 +14,7 @@ O objetivo é ilustrar o fluxo completo de uma aplicação de processamento de b
 - **AWS CLI** (para interagir com SQS)
 - **LocalStack** (para simular serviços AWS localmente)
 
-## Arquitetura 🗺️
+## Arquitetura
 
 A arquitetura do projeto é baseada em um padrão de produtor/consumidor, onde um serviço (a AWS CLI, em nosso caso) atua como produtor de mensagens, e nossa API .NET atua como consumidor. A orquestração e a escalabilidade são gerenciadas pelo Kubernetes.
 
@@ -37,7 +37,7 @@ A arquitetura do projeto é baseada em um padrão de produtor/consumidor, onde u
                (Cluster Kubernetes no Docker Desktop)
 ```
 
-## Pré-requisitos 🚀
+## Pré-requisitos
 
 Certifique-se de que os seguintes softwares estão instalados na sua máquina:
 
@@ -90,7 +90,7 @@ kubectl config use-context docker-desktop
 kubectl apply -f k8s/deployment.yaml
 ```
 
-### Passo 4: Verificação e Teste 🧪
+### Passo 4: Verificação e Teste
 
 1.  **Monitore a criação dos Pods:**
     ```bash
